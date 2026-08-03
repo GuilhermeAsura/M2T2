@@ -1,0 +1,14 @@
+(m2t2_env) nexus@nexus-PC:~/Desktop/M2T2 (master)$ python demo.py eval.checkpoint=weights/m2t2.pth eval.data_dir=sample_data/real_world/00 eval.mask_thresh=0.4 eval.num_runs=5
+Traceback (most recent call last):
+  File "/home/nexus/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: 'outputs/2026-08-03/17-12-44'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+(m2t2_env) nexus@nexus-PC:~/Desktop/M2T2 (master)$ sudo chown -R nexus:nexus /home/nexus/Desktop/M2T2/outputs/2026-08-03/
+[sudo] password for nexus: 
+(m2t2_env) nexus@nexus-PC:~/Desktop/M2T2 (master)$ python demo.py eval.checkpoint=weights/m2t2.pth eval.data_dir=sample_data/real_world/00 eval.mask_thresh=0.4 eval.num_runs=5
+Waiting for meshcat server... have you started a server? Run `meshcat-server` to start a server
+
+
+enquanto aguardamos a inferencia no container, testei rodar a inferencia em minha máquina host. Confira o logs.txt. Acredito que a inferencia no container não finalizar devido ao request do meshcat server. Procede

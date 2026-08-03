@@ -2,7 +2,10 @@ h5py
 hydra-core
 matplotlib
 meshcat
+msgpack
+msgpack-numpy
 numpy
+pyzmq
 scikit-learn
 scipy
 tensorboard

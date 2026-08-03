@@ -1,0 +1,75 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.60kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/nvidia/cuda:11.7.1-devel-ubuntu22.04
+#2 DONE 0.9s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 138B done
+#3 DONE 0.0s
+
+#4 [stage-0  1/12] FROM docker.io/nvidia/cuda:11.7.1-devel-ubuntu22.04@sha256:18aade8cf02eede9d4db5d8a8a73d4505bb2322e91cd54e4c601e5ae100ed691
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 76.41kB 0.0s done
+#5 DONE 0.0s
+
+#6 [stage-0  9/12] COPY requirements.txt .
+#6 CACHED
+
+#7 [stage-0  2/12] RUN --mount=type=cache,target=/var/cache/apt,sharing=locked     apt-get update &&     apt-get install --no-install-recommends -y         python3         python3-dev         python3-pip         git         ninja-build         build-essential &&     rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [stage-0  3/12] RUN python3 -m pip install --upgrade pip
+#8 CACHED
+
+#9 [stage-0  4/12] RUN pip3 install torch==2.0.1+cu117 torchvision==0.15.2+cu117         --index-url https://download.pytorch.org/whl/cu117
+#9 CACHED
+
+#10 [stage-0  5/12] RUN pip3 install "numpy<2"
+#10 CACHED
+
+#11 [stage-0  6/12] WORKDIR /workspace/m2t2
+#11 CACHED
+
+#12 [stage-0  7/12] COPY pointnet2_ops ./pointnet2_ops
+#12 CACHED
+
+#13 [stage-0  8/12] RUN pip3 install --no-build-isolation ./pointnet2_ops
+#13 CACHED
+
+#14 [stage-0 10/12] RUN pip3 install -r requirements.txt
+#14 CACHED
+
+#15 [stage-0 11/12] COPY . .
+#15 DONE 0.2s
+
+#16 [stage-0 12/12] RUN pip3 install --no-deps .
+#16 0.365 Processing ./.
+#16 0.367   Installing build dependencies: started
+#16 0.935   Installing build dependencies: finished with status 'done'
+#16 0.935   Getting requirements to build wheel: started
+#16 1.148   Getting requirements to build wheel: finished with status 'done'
+#16 1.149   Preparing metadata (pyproject.toml): started
+#16 1.266   Preparing metadata (pyproject.toml): finished with status 'done'
+#16 1.268 Building wheels for collected packages: m2t2
+#16 1.269   Building wheel for m2t2 (pyproject.toml): started
+#16 1.399   Building wheel for m2t2 (pyproject.toml): finished with status 'done'
+#16 1.399   Created wheel for m2t2: filename=m2t2-1.0.0-py3-none-any.whl size=3286 sha256=520104c081b55f191b5f55c25f936ec8713f114370c3f37d954a9da4a529044f
+#16 1.400   Stored in directory: /tmp/pip-ephem-wheel-cache-697yjs99/wheels/49/33/1f/19dca86bf0814986a0d16c33ee577d300b0a46dfbdc471ae0e
+#16 1.401 Successfully built m2t2
+#16 1.403 Installing collected packages: m2t2
+#16 1.431 Successfully installed m2t2-1.0.0
+#16 1.431 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#16 DONE 1.5s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 10.9s done
+#17 writing image sha256:a673cce8933dddf606b03fca6673526c0b83b8ad254346b9ad14b226206dc4a7 done
+#17 naming to docker.io/library/m2t2:latest done
+#17 DONE 10.9s

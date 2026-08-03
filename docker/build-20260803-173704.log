@@ -1,0 +1,279 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.78kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/nvidia/cuda:11.7.1-devel-ubuntu22.04
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 138B done
+#3 DONE 0.0s
+
+#4 [stage-0  1/12] FROM docker.io/nvidia/cuda:11.7.1-devel-ubuntu22.04
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 46.70kB done
+#5 DONE 0.0s
+
+#6 [stage-0  2/12] RUN --mount=type=cache,target=/var/cache/apt,sharing=locked     apt-get update &&     apt-get install --no-install-recommends -y         python3         python3-dev         python3-pip         git         ninja-build         build-essential &&     rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [stage-0  3/12] RUN python3 -m pip install --upgrade pip
+#7 CACHED
+
+#8 [stage-0  6/12] WORKDIR /workspace/m2t2
+#8 CACHED
+
+#9 [stage-0  4/12] RUN pip3 install torch==2.0.1+cu117 torchvision==0.15.2+cu117         --index-url https://download.pytorch.org/whl/cu117
+#9 CACHED
+
+#10 [stage-0  5/12] RUN pip3 install "numpy<2"
+#10 CACHED
+
+#11 [stage-0  7/12] COPY pointnet2_ops ./pointnet2_ops
+#11 CACHED
+
+#12 [stage-0  8/12] RUN pip3 install --no-build-isolation ./pointnet2_ops
+#12 CACHED
+
+#13 [stage-0  9/12] COPY requirements.txt .
+#13 DONE 0.0s
+
+#14 [stage-0 10/12] RUN pip3 install -r requirements.txt
+#14 0.677 Collecting h5py (from -r requirements.txt (line 1))
+#14 0.759   Downloading h5py-3.16.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#14 0.780 Collecting hydra-core (from -r requirements.txt (line 2))
+#14 0.807   Downloading hydra_core-1.3.4-py3-none-any.whl.metadata (5.7 kB)
+#14 0.930 Collecting matplotlib (from -r requirements.txt (line 3))
+#14 0.939   Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (52 kB)
+#14 1.096 Collecting meshcat (from -r requirements.txt (line 4))
+#14 1.105   Downloading meshcat-0.3.2-py3-none-any.whl.metadata (595 bytes)
+#14 1.163 Collecting msgpack (from -r requirements.txt (line 5))
+#14 1.172   Downloading msgpack-1.2.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+#14 1.304 Collecting msgpack-numpy (from -r requirements.txt (line 6))
+#14 1.324   Downloading msgpack_numpy-0.4.8-py2.py3-none-any.whl.metadata (5.0 kB)
+#14 1.328 Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 7)) (1.26.4)
+#14 1.514 Collecting pyzmq (from -r requirements.txt (line 8))
+#14 1.523   Downloading pyzmq-27.1.0-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+#14 1.607 Collecting scikit-learn (from -r requirements.txt (line 9))
+#14 1.617   Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#14 1.719 Collecting scipy (from -r requirements.txt (line 10))
+#14 1.727   Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#14 1.756 Collecting tensorboard (from -r requirements.txt (line 11))
+#14 1.764   Downloading tensorboard-2.21.0-py3-none-any.whl.metadata (1.8 kB)
+#14 1.767 Requirement already satisfied: torch in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 12)) (2.0.1+cu117)
+#14 1.767 Requirement already satisfied: torchvision in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 13)) (0.15.2+cu117)
+#14 1.837 Collecting trimesh (from -r requirements.txt (line 14))
+#14 1.845   Downloading trimesh-5.0.0-py3-none-any.whl.metadata (13 kB)
+#14 1.878 Collecting omegaconf<2.4,>=2.2 (from hydra-core->-r requirements.txt (line 2))
+#14 1.886   Downloading omegaconf-2.3.1-py3-none-any.whl.metadata (4.5 kB)
+#14 1.901 Collecting antlr4-python3-runtime==4.9.* (from hydra-core->-r requirements.txt (line 2))
+#14 1.926   Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+#14 1.957   Installing build dependencies: started
+#14 2.716   Installing build dependencies: finished with status 'done'
+#14 2.717   Getting requirements to build wheel: started
+#14 2.964   Getting requirements to build wheel: finished with status 'done'
+#14 2.965   Preparing metadata (pyproject.toml): started
+#14 3.095   Preparing metadata (pyproject.toml): finished with status 'done'
+#14 3.113 Collecting packaging (from hydra-core->-r requirements.txt (line 2))
+#14 3.120   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#14 3.162 Collecting PyYAML>=5.1.0 (from omegaconf<2.4,>=2.2->hydra-core->-r requirements.txt (line 2))
+#14 3.170   Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#14 3.237 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 3))
+#14 3.248   Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+#14 3.264 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 3))
+#14 3.272   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#14 3.386 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 3))
+#14 3.394   Downloading fonttools-4.63.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#14 3.461 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 3))
+#14 3.472   Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (5.1 kB)
+#14 3.477 Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib->-r requirements.txt (line 3)) (12.2.0)
+#14 3.497 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 3))
+#14 3.505   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#14 3.521 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 3))
+#14 3.528   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#14 3.561 Collecting ipython>=5 (from meshcat->-r requirements.txt (line 4))
+#14 3.571   Downloading ipython-8.39.0-py3-none-any.whl.metadata (5.1 kB)
+#14 3.601 Collecting u-msgpack-python>=2.4.1 (from meshcat->-r requirements.txt (line 4))
+#14 3.609   Downloading u_msgpack_python-2.8.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#14 3.639 Collecting tornado>=4.0.0 (from meshcat->-r requirements.txt (line 4))
+#14 3.648   Downloading tornado-6.5.7-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (2.8 kB)
+#14 3.672 Collecting pyngrok>=4.1.6 (from meshcat->-r requirements.txt (line 4))
+#14 3.680   Downloading pyngrok-8.1.2-py3-none-any.whl.metadata (8.6 kB)
+#14 3.706 Collecting joblib>=1.2.0 (from scikit-learn->-r requirements.txt (line 9))
+#14 3.714   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#14 3.730 Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r requirements.txt (line 9))
+#14 3.737   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#14 3.755 Collecting absl-py>=0.4 (from tensorboard->-r requirements.txt (line 11))
+#14 3.764   Downloading absl_py-2.5.0-py3-none-any.whl.metadata (3.3 kB)
+#14 4.172 Collecting grpcio<2.0,>=1.74.0 (from tensorboard->-r requirements.txt (line 11))
+#14 4.180   Downloading grpcio-1.83.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+#14 4.208 Collecting markdown>=2.6.8 (from tensorboard->-r requirements.txt (line 11))
+#14 4.216   Downloading markdown-3.10.3-py3-none-any.whl.metadata (5.1 kB)
+#14 4.326 Collecting protobuf<8.0.0,>=6.31.1 (from tensorboard->-r requirements.txt (line 11))
+#14 4.335   Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+#14 4.338 Requirement already satisfied: setuptools>=41.0.0 in /usr/lib/python3/dist-packages (from tensorboard->-r requirements.txt (line 11)) (59.6.0)
+#14 4.351 Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard->-r requirements.txt (line 11))
+#14 4.369   Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+#14 4.390 Collecting werkzeug>=1.0.1 (from tensorboard->-r requirements.txt (line 11))
+#14 4.398   Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+#14 4.401 Requirement already satisfied: typing-extensions~=4.12 in /usr/local/lib/python3.10/dist-packages (from grpcio<2.0,>=1.74.0->tensorboard->-r requirements.txt (line 11)) (4.15.0)
+#14 4.404 Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 12)) (3.29.0)
+#14 4.404 Requirement already satisfied: sympy in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 12)) (1.14.0)
+#14 4.404 Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 12)) (3.4.2)
+#14 4.405 Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 12)) (3.1.6)
+#14 4.405 Requirement already satisfied: triton==2.0.0 in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 12)) (2.0.0)
+#14 4.406 Requirement already satisfied: cmake in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0->torch->-r requirements.txt (line 12)) (3.25.0)
+#14 4.407 Requirement already satisfied: lit in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0->torch->-r requirements.txt (line 12)) (15.0.7)
+#14 4.408 Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from torchvision->-r requirements.txt (line 13)) (2.28.1)
+#14 4.425 Collecting decorator (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.433   Downloading decorator-5.3.1-py3-none-any.whl.metadata (3.9 kB)
+#14 4.447 Collecting exceptiongroup (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.455   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+#14 4.475 Collecting jedi>=0.16 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.482   Downloading jedi-0.20.0-py2.py3-none-any.whl.metadata (23 kB)
+#14 4.502 Collecting matplotlib-inline (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.510   Downloading matplotlib_inline-0.2.2-py3-none-any.whl.metadata (2.4 kB)
+#14 4.526 Collecting pexpect>4.3 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.544   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+#14 4.569 Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.577   Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+#14 4.596 Collecting pygments>=2.4.0 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.604   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+#14 4.619 Collecting stack_data (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.626   Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+#14 4.644 Collecting traitlets>=5.13.0 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.652   Downloading traitlets-5.16.1-py3-none-any.whl.metadata (10 kB)
+#14 4.672 Collecting wcwidth>=0.1.4 (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.680   Downloading wcwidth-0.8.2-py3-none-any.whl.metadata (43 kB)
+#14 4.700 Collecting parso<0.9.0,>=0.8.6 (from jedi>=0.16->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.707   Downloading parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+#14 4.725 Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.733   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#14 4.752 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 3))
+#14 4.760   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#14 4.766 Requirement already satisfied: markupsafe>=2.1.1 in /usr/local/lib/python3.10/dist-packages (from werkzeug>=1.0.1->tensorboard->-r requirements.txt (line 11)) (3.0.3)
+#14 4.778 Requirement already satisfied: charset-normalizer<3,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->torchvision->-r requirements.txt (line 13)) (2.1.1)
+#14 4.779 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->torchvision->-r requirements.txt (line 13)) (3.4)
+#14 4.780 Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->torchvision->-r requirements.txt (line 13)) (1.26.13)
+#14 4.780 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->torchvision->-r requirements.txt (line 13)) (2022.12.7)
+#14 4.799 Collecting executing>=1.2.0 (from stack_data->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.808   Downloading executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+#14 4.824 Collecting asttokens>=2.1.0 (from stack_data->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.833   Downloading asttokens-3.0.2-py3-none-any.whl.metadata (5.7 kB)
+#14 4.856 Collecting pure-eval (from stack_data->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.864   Downloading pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+#14 4.870 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy->torch->-r requirements.txt (line 12)) (1.3.0)
+#14 4.883 Downloading h5py-3.16.0-cp310-cp310-manylinux_2_28_x86_64.whl (5.1 MB)
+#14 5.085    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 27.4 MB/s  0:00:00
+#14 5.094 Downloading hydra_core-1.3.4-py3-none-any.whl (155 kB)
+#14 5.106 Downloading omegaconf-2.3.1-py3-none-any.whl (79 kB)
+#14 5.121 Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.8 MB)
+#14 5.248    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 69.5 MB/s  0:00:00
+#14 5.258 Downloading meshcat-0.3.2-py3-none-any.whl (2.6 MB)
+#14 5.288    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 87.0 MB/s  0:00:00
+#14 5.298 Downloading msgpack-1.2.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (407 kB)
+#14 5.312 Downloading msgpack_numpy-0.4.8-py2.py3-none-any.whl (6.9 kB)
+#14 5.321 Downloading pyzmq-27.1.0-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (854 kB)
+#14 5.333    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 854.1/854.1 kB 73.1 MB/s  0:00:00
+#14 5.343 Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#14 5.441    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 98.2 MB/s  0:00:00
+#14 5.453 Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+#14 5.830    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 100.1 MB/s  0:00:00
+#14 5.840 Downloading tensorboard-2.21.0-py3-none-any.whl (5.5 MB)
+#14 5.899    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 94.1 MB/s  0:00:00
+#14 5.909 Downloading grpcio-1.83.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.1 MB)
+#14 5.987    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 91.0 MB/s  0:00:00
+#14 5.995 Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl (327 kB)
+#14 6.008 Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+#14 6.077    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 97.2 MB/s  0:00:00
+#14 6.085 Downloading trimesh-5.0.0-py3-none-any.whl (745 kB)
+#14 6.096    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 745.5/745.5 kB 60.9 MB/s  0:00:00
+#14 6.106 Downloading absl_py-2.5.0-py3-none-any.whl (137 kB)
+#14 6.117 Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+#14 6.139 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#14 6.152 Downloading fonttools-4.63.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.9 MB)
+#14 6.204    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 95.1 MB/s  0:00:00
+#14 6.214 Downloading ipython-8.39.0-py3-none-any.whl (831 kB)
+#14 6.225    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 831.8/831.8 kB 71.6 MB/s  0:00:00
+#14 6.233 Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+#14 6.251 Downloading jedi-0.20.0-py2.py3-none-any.whl (4.9 MB)
+#14 6.306    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 88.5 MB/s  0:00:00
+#14 6.315 Downloading parso-0.8.7-py2.py3-none-any.whl (107 kB)
+#14 6.325 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#14 6.340 Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+#14 6.360    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 82.2 MB/s  0:00:00
+#14 6.377 Downloading markdown-3.10.3-py3-none-any.whl (110 kB)
+#14 6.388 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#14 6.400 Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+#14 6.411 Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+#14 6.422 Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+#14 6.438    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 76.1 MB/s  0:00:00
+#14 6.446 Downloading pyngrok-8.1.2-py3-none-any.whl (25 kB)
+#14 6.456 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#14 6.467 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#14 6.479 Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+#14 6.490    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 66.2 MB/s  0:00:00
+#14 6.506 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#14 6.516 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#14 6.526 Downloading tornado-6.5.7-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (449 kB)
+#14 6.540 Downloading traitlets-5.16.1-py3-none-any.whl (86 kB)
+#14 6.552 Downloading u_msgpack_python-2.8.0-py2.py3-none-any.whl (10 kB)
+#14 6.563 Downloading wcwidth-0.8.2-py3-none-any.whl (323 kB)
+#14 6.576 Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+#14 6.587 Downloading decorator-5.3.1-py3-none-any.whl (10 kB)
+#14 6.596 Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+#14 6.606 Downloading matplotlib_inline-0.2.2-py3-none-any.whl (9.5 kB)
+#14 6.616 Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+#14 6.626 Downloading asttokens-3.0.2-py3-none-any.whl (28 kB)
+#14 6.635 Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+#14 6.644 Downloading pure_eval-0.2.3-py3-none-any.whl (11 kB)
+#14 6.784 Building wheels for collected packages: antlr4-python3-runtime
+#14 6.785   Building wheel for antlr4-python3-runtime (pyproject.toml): started
+#14 6.948   Building wheel for antlr4-python3-runtime (pyproject.toml): finished with status 'done'
+#14 6.949   Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144589 sha256=5de2470a1cb3e902018b92c9740e66d2834d5afd82d2431cb872cb284677a5d0
+#14 6.949   Stored in directory: /root/.cache/pip/wheels/12/93/dd/1f6a127edc45659556564c5730f6d4e300888f4bca2d4c5a88
+#14 6.951 Successfully built antlr4-python3-runtime
+#14 7.087 Installing collected packages: u-msgpack-python, pure-eval, ptyprocess, antlr4-python3-runtime, werkzeug, wcwidth, trimesh, traitlets, tornado, threadpoolctl, tensorboard-data-server, six, scipy, pyzmq, PyYAML, pyparsing, pygments, protobuf, pexpect, parso, packaging, msgpack, markdown, kiwisolver, joblib, h5py, grpcio, fonttools, executing, exceptiongroup, decorator, cycler, contourpy, asttokens, absl-py, tensorboard, stack_data, scikit-learn, python-dateutil, pyngrok, prompt_toolkit, omegaconf, msgpack-numpy, matplotlib-inline, jedi, matplotlib, ipython, hydra-core, meshcat
+#14 15.64 
+#14 15.65 Successfully installed PyYAML-6.0.3 absl-py-2.5.0 antlr4-python3-runtime-4.9.3 asttokens-3.0.2 contourpy-1.3.2 cycler-0.12.1 decorator-5.3.1 exceptiongroup-1.3.1 executing-2.2.1 fonttools-4.63.0 grpcio-1.83.0 h5py-3.16.0 hydra-core-1.3.4 ipython-8.39.0 jedi-0.20.0 joblib-1.5.3 kiwisolver-1.5.0 markdown-3.10.3 matplotlib-3.10.9 matplotlib-inline-0.2.2 meshcat-0.3.2 msgpack-1.2.1 msgpack-numpy-0.4.8 omegaconf-2.3.1 packaging-26.2 parso-0.8.7 pexpect-4.9.0 prompt_toolkit-3.0.53 protobuf-7.35.1 ptyprocess-0.7.0 pure-eval-0.2.3 pygments-2.20.0 pyngrok-8.1.2 pyparsing-3.3.2 python-dateutil-2.9.0.post0 pyzmq-27.1.0 scikit-learn-1.7.2 scipy-1.15.3 six-1.17.0 stack_data-0.6.3 tensorboard-2.21.0 tensorboard-data-server-0.7.2 threadpoolctl-3.6.0 tornado-6.5.7 traitlets-5.16.1 trimesh-5.0.0 u-msgpack-python-2.8.0 wcwidth-0.8.2 werkzeug-3.1.8
+#14 15.65 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#14 15.65 
+#14 15.65 [notice] A new release of pip is available: 26.1.2 -> 26.2
+#14 15.65 [notice] To update, run: python3 -m pip install --upgrade pip
+#14 DONE 16.2s
+
+#15 [stage-0 11/12] COPY . .
+#15 DONE 0.3s
+
+#16 [stage-0 12/12] RUN pip3 install --no-deps .
+#16 0.360 Processing ./.
+#16 0.362   Installing build dependencies: started
+#16 0.930   Installing build dependencies: finished with status 'done'
+#16 0.931   Getting requirements to build wheel: started
+#16 1.140   Getting requirements to build wheel: finished with status 'done'
+#16 1.141   Preparing metadata (pyproject.toml): started
+#16 1.258   Preparing metadata (pyproject.toml): finished with status 'done'
+#16 1.260 Building wheels for collected packages: m2t2
+#16 1.260   Building wheel for m2t2 (pyproject.toml): started
+#16 1.395   Building wheel for m2t2 (pyproject.toml): finished with status 'done'
+#16 1.396   Created wheel for m2t2: filename=m2t2-1.0.0-py3-none-any.whl size=3303 sha256=cf63c795b1f1b812906106d4c73630c2ffdbab0ab736b27951c8a0b4e5eed912
+#16 1.396   Stored in directory: /tmp/pip-ephem-wheel-cache-omah25et/wheels/49/33/1f/19dca86bf0814986a0d16c33ee577d300b0a46dfbdc471ae0e
+#16 1.399 Successfully built m2t2
+#16 1.400 Installing collected packages: m2t2
+#16 1.410 Successfully installed m2t2-1.0.0
+#16 1.410 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#16 1.411 
+#16 1.411 [notice] A new release of pip is available: 26.1.2 -> 26.2
+#16 1.411 [notice] To update, run: python3 -m pip install --upgrade pip
+#16 DONE 1.5s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 1.6s done
+#17 writing image sha256:e2c1b7b2c6487a484171bf4d9555e8b5fb108141c87397434aec56dba94be32c done
+#17 naming to docker.io/library/m2t2:latest done
+#17 DONE 1.6s

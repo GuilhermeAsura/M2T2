@@ -1,0 +1,11 @@
+.git
+m2t2_env
+weights
+outputs
+sample_data
+build
+*.egg-info
+__pycache__
+.vscode
+logs.txt
+REPORT.md

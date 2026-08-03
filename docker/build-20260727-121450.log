@@ -1,0 +1,721 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.45kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/nvidia/cuda:11.7.1-devel-ubuntu22.04
+#2 DONE 1.9s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 138B done
+#3 DONE 0.0s
+
+#4 [stage-0  1/12] FROM docker.io/nvidia/cuda:11.7.1-devel-ubuntu22.04@sha256:18aade8cf02eede9d4db5d8a8a73d4505bb2322e91cd54e4c601e5ae100ed691
+#4 resolve docker.io/nvidia/cuda:11.7.1-devel-ubuntu22.04@sha256:18aade8cf02eede9d4db5d8a8a73d4505bb2322e91cd54e4c601e5ae100ed691 done
+#4 sha256:18aade8cf02eede9d4db5d8a8a73d4505bb2322e91cd54e4c601e5ae100ed691 743B / 743B done
+#4 sha256:a3184e4dc6f968da5bba86df3081ff3013f8e3674a9bfce544af8be905d2f17a 2.63kB / 2.63kB done
+#4 sha256:aece8493d3972efa43bfd4ee3cdba659c0f787f8f59c82fb3e48c87cbb22a12e 0B / 29.54MB 0.1s
+#4 sha256:28a6f693c19c36c4f911a996b8d7697bb3b423cc20fc455ddcca13373efd45b8 16.30kB / 16.30kB done
+#4 sha256:976b13f9ef1ad110649609e8622e8b8010c011ee89afb03c87729873a5658b77 0B / 4.62MB 0.1s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 0B / 47.88MB 0.1s
+#4 ...
+
+#5 [internal] load build context
+#5 transferring context: 112.47MB 0.3s done
+#5 DONE 0.3s
+
+#4 [stage-0  1/12] FROM docker.io/nvidia/cuda:11.7.1-devel-ubuntu22.04@sha256:18aade8cf02eede9d4db5d8a8a73d4505bb2322e91cd54e4c601e5ae100ed691
+#4 sha256:aece8493d3972efa43bfd4ee3cdba659c0f787f8f59c82fb3e48c87cbb22a12e 2.10MB / 29.54MB 0.5s
+#4 sha256:aece8493d3972efa43bfd4ee3cdba659c0f787f8f59c82fb3e48c87cbb22a12e 12.58MB / 29.54MB 0.6s
+#4 sha256:aece8493d3972efa43bfd4ee3cdba659c0f787f8f59c82fb3e48c87cbb22a12e 29.54MB / 29.54MB 0.8s done
+#4 sha256:4dda4739d0071d0fbd8b16db376052d74fe243b097f2ee2e8a709f80db9de63c 0B / 188B 0.8s
+#4 extracting sha256:aece8493d3972efa43bfd4ee3cdba659c0f787f8f59c82fb3e48c87cbb22a12e
+#4 sha256:976b13f9ef1ad110649609e8622e8b8010c011ee89afb03c87729873a5658b77 2.10MB / 4.62MB 1.5s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 6.29MB / 47.88MB 1.5s
+#4 sha256:4dda4739d0071d0fbd8b16db376052d74fe243b097f2ee2e8a709f80db9de63c 188B / 188B 1.4s done
+#4 extracting sha256:aece8493d3972efa43bfd4ee3cdba659c0f787f8f59c82fb3e48c87cbb22a12e 0.6s done
+#4 sha256:197843862cd5ca7e4c4ed2e392193bfc887c974c76ec8062a5aa817cb865fe49 0B / 6.88kB 1.5s
+#4 sha256:976b13f9ef1ad110649609e8622e8b8010c011ee89afb03c87729873a5658b77 4.62MB / 4.62MB 1.6s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 9.44MB / 47.88MB 1.6s
+#4 sha256:976b13f9ef1ad110649609e8622e8b8010c011ee89afb03c87729873a5658b77 4.62MB / 4.62MB 1.6s done
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 13.63MB / 47.88MB 1.7s
+#4 extracting sha256:976b13f9ef1ad110649609e8622e8b8010c011ee89afb03c87729873a5658b77 0.1s done
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 0B / 1.09GB 1.7s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 17.83MB / 47.88MB 1.9s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 22.02MB / 47.88MB 2.0s
+#4 sha256:197843862cd5ca7e4c4ed2e392193bfc887c974c76ec8062a5aa817cb865fe49 6.88kB / 6.88kB 1.9s done
+#4 sha256:7908cc89184bf1738781f8839debb1bf7934aed5b967a439251388d6fc418c5b 0B / 63.72kB 2.0s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 25.17MB / 47.88MB 2.1s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 32.51MB / 47.88MB 2.3s
+#4 sha256:7908cc89184bf1738781f8839debb1bf7934aed5b967a439251388d6fc418c5b 63.72kB / 63.72kB 2.2s done
+#4 sha256:125997f820336696a3ac7fcffd8bd1f9b684e41c2a854c840b2fe2d7a51a70c4 0B / 1.68kB 2.3s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 36.70MB / 47.88MB 2.5s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 57.67MB / 1.09GB 2.5s
+#4 sha256:125997f820336696a3ac7fcffd8bd1f9b684e41c2a854c840b2fe2d7a51a70c4 1.68kB / 1.68kB 2.3s done
+#4 sha256:675adc11913113b8194283b213c5b8a6adf88be66bb71458db659ec794aba143 0B / 1.52kB 2.5s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 42.99MB / 47.88MB 2.7s
+#4 sha256:675adc11913113b8194283b213c5b8a6adf88be66bb71458db659ec794aba143 1.52kB / 1.52kB 2.5s done
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 0B / 1.94GB 2.7s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 47.19MB / 47.88MB 2.8s
+#4 sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 47.88MB / 47.88MB 2.9s done
+#4 sha256:ab12bfa13ae3cd46e8b20bc607fb070137b23ca237638f1532758e4eda24b1e4 0B / 88.22kB 2.9s
+#4 extracting sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 118.49MB / 1.09GB 3.1s
+#4 extracting sha256:b63c65d3acaa1b7977b3a20e2479668e65e4fd16d6f119933b550619692b6924 0.4s done
+#4 extracting sha256:4dda4739d0071d0fbd8b16db376052d74fe243b097f2ee2e8a709f80db9de63c done
+#4 extracting sha256:197843862cd5ca7e4c4ed2e392193bfc887c974c76ec8062a5aa817cb865fe49 done
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 177.21MB / 1.09GB 3.6s
+#4 sha256:ab12bfa13ae3cd46e8b20bc607fb070137b23ca237638f1532758e4eda24b1e4 88.22kB / 88.22kB 3.8s
+#4 sha256:ab12bfa13ae3cd46e8b20bc607fb070137b23ca237638f1532758e4eda24b1e4 88.22kB / 88.22kB 3.8s done
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 238.03MB / 1.09GB 4.2s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 296.75MB / 1.09GB 4.9s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 365.95MB / 1.09GB 5.7s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 425.72MB / 1.09GB 6.4s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 97.52MB / 1.94GB 7.0s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 494.93MB / 1.09GB 7.2s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 552.60MB / 1.09GB 7.9s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 620.76MB / 1.09GB 8.8s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 687.87MB / 1.09GB 9.5s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 745.54MB / 1.09GB 10.2s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 195.04MB / 1.94GB 10.4s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 812.65MB / 1.09GB 10.9s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 875.56MB / 1.09GB 11.7s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 947.91MB / 1.09GB 12.7s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 1.01GB / 1.09GB 13.4s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 295.70MB / 1.94GB 13.8s
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 1.07GB / 1.09GB 14.1s
+#4 extracting sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df
+#4 sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 1.09GB / 1.09GB 15.4s done
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 395.31MB / 1.94GB 17.0s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 492.83MB / 1.94GB 20.3s
+#4 extracting sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 5.0s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 593.49MB / 1.94GB 23.7s
+#4 extracting sha256:cf87cabd72e27789a2fe43f3d0a32a42a57d08c07e062c6eaf20431bead810df 8.6s done
+#4 extracting sha256:7908cc89184bf1738781f8839debb1bf7934aed5b967a439251388d6fc418c5b done
+#4 extracting sha256:125997f820336696a3ac7fcffd8bd1f9b684e41c2a854c840b2fe2d7a51a70c4 done
+#4 extracting sha256:675adc11913113b8194283b213c5b8a6adf88be66bb71458db659ec794aba143 done
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 691.01MB / 1.94GB 26.9s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 789.58MB / 1.94GB 30.1s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 889.19MB / 1.94GB 33.4s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 991.95MB / 1.94GB 36.8s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.09GB / 1.94GB 40.2s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.19GB / 1.94GB 43.5s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.29GB / 1.94GB 46.7s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.39GB / 1.94GB 50.1s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.49GB / 1.94GB 53.6s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.59GB / 1.94GB 56.8s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.69GB / 1.94GB 60.0s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.79GB / 1.94GB 63.1s
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.89GB / 1.94GB 66.3s
+#4 extracting sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa
+#4 sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 1.94GB / 1.94GB 68.1s done
+#4 extracting sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 5.0s
+#4 extracting sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 10.0s
+#4 extracting sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 15.1s
+#4 extracting sha256:ce04642bc4a108fb00714bccd11e03d0d2cf1c6f0c1f1552a8a36079b5a9a0fa 15.5s done
+#4 extracting sha256:ab12bfa13ae3cd46e8b20bc607fb070137b23ca237638f1532758e4eda24b1e4
+#4 extracting sha256:ab12bfa13ae3cd46e8b20bc607fb070137b23ca237638f1532758e4eda24b1e4 done
+#4 DONE 84.6s
+
+#6 [stage-0  2/12] RUN --mount=type=cache,target=/var/cache/apt,sharing=locked     apt-get update &&     apt-get install --no-install-recommends -y         python3         python3-dev         python3-pip         git         ninja-build         build-essential &&     rm -rf /var/lib/apt/lists/*
+#6 0.513 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+#6 0.517 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+#6 0.679 Get:3 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64  InRelease [1581 B]
+#6 0.757 Get:4 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64  Packages [2849 kB]
+#6 1.399 Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [4147 kB]
+#6 1.529 Get:6 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+#6 1.784 Get:7 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+#6 2.030 Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+#6 2.559 Get:9 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1314 kB]
+#6 2.592 Get:10 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+#6 2.598 Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [7461 kB]
+#6 2.625 Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+#6 3.297 Get:13 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [84.1 kB]
+#6 3.431 Get:14 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+#6 3.436 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1616 kB]
+#6 3.496 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [4484 kB]
+#6 3.677 Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [7763 kB]
+#6 3.992 Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [92.7 kB]
+#6 3.993 Get:19 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [82.8 kB]
+#6 3.996 Get:20 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.6 kB]
+#6 4.421 Fetched 50.3 MB in 4s (11.8 MB/s)
+#6 4.421 Reading package lists...
+#6 5.421 Reading package lists...
+#6 6.346 Building dependency tree...
+#6 6.553 Reading state information...
+#6 6.704 build-essential is already the newest version (12.9ubuntu3).
+#6 6.704 build-essential set to manually installed.
+#6 6.704 The following additional packages will be installed:
+#6 6.704   git-man libbrotli1 libcurl3-gnutls liberror-perl libexpat1 libexpat1-dev
+#6 6.704   libjs-jquery libjs-sphinxdoc libjs-underscore libmpdec3 libnghttp2-14
+#6 6.704   libpsl5 libpython3-dev libpython3-stdlib libpython3.10 libpython3.10-dev
+#6 6.705   libpython3.10-minimal libpython3.10-stdlib librtmp1 libssh-4 media-types
+#6 6.705   python3-distutils python3-lib2to3 python3-minimal python3-pkg-resources
+#6 6.705   python3-setuptools python3-wheel python3.10 python3.10-dev
+#6 6.705   python3.10-minimal zlib1g-dev
+#6 6.706 Suggested packages:
+#6 6.706   gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui
+#6 6.706   gitk gitweb git-cvs git-mediawiki git-svn python3-doc python3-tk
+#6 6.706   python3-venv python-setuptools-doc python3.10-venv python3.10-doc
+#6 6.706   binfmt-support
+#6 6.706 Recommended packages:
+#6 6.706   less ssh-client javascript-common publicsuffix
+#6 6.831 The following NEW packages will be installed:
+#6 6.831   git git-man libbrotli1 libcurl3-gnutls liberror-perl libexpat1 libexpat1-dev
+#6 6.832   libjs-jquery libjs-sphinxdoc libjs-underscore libmpdec3 libnghttp2-14
+#6 6.832   libpsl5 libpython3-dev libpython3-stdlib libpython3.10 libpython3.10-dev
+#6 6.832   libpython3.10-minimal libpython3.10-stdlib librtmp1 libssh-4 media-types
+#6 6.832   ninja-build python3 python3-dev python3-distutils python3-lib2to3
+#6 6.832   python3-minimal python3-pip python3-pkg-resources python3-setuptools
+#6 6.832   python3-wheel python3.10 python3.10-dev python3.10-minimal zlib1g-dev
+#6 7.210 0 upgraded, 36 newly installed, 0 to remove and 103 not upgraded.
+#6 7.210 Need to get 21.1 MB of archives.
+#6 7.210 After this operation, 86.4 MB of additional disk space will be used.
+#6 7.210 Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.16 [817 kB]
+#6 8.520 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexpat1 amd64 2.4.7-1ubuntu0.7 [92.1 kB]
+#6 8.534 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.16 [2254 kB]
+#6 8.904 Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-minimal amd64 3.10.6-1~22.04.1 [24.3 kB]
+#6 8.906 Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 media-types all 7.0.0 [25.5 kB]
+#6 8.908 Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpdec3 amd64 2.5.1-2build2 [86.8 kB]
+#6 8.915 Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.16 [1850 kB]
+#6 9.052 Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.16 [508 kB]
+#6 9.081 Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3-stdlib amd64 3.10.6-1~22.04.1 [6812 B]
+#6 9.081 Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3 amd64 3.10.6-1~22.04.1 [22.8 kB]
+#6 9.082 Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-pkg-resources all 59.6.0-1.2ubuntu0.22.04.3 [133 kB]
+#6 9.089 Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnghttp2-14 amd64 1.43.0-1ubuntu0.4 [76.9 kB]
+#6 9.091 Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpsl5 amd64 0.21.0-1.2build2 [58.4 kB]
+#6 9.269 Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+#6 9.277 Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+#6 9.278 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libssh-4 amd64 0.9.6-2ubuntu0.22.04.7 [187 kB]
+#6 9.282 Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl3-gnutls amd64 7.81.0-1ubuntu1.25 [284 kB]
+#6 9.289 Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+#6 9.290 Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git-man all 1:2.34.1-1ubuntu1.17 [954 kB]
+#6 9.313 Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git amd64 1:2.34.1-1ubuntu1.17 [3174 kB]
+#6 9.484 Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexpat1-dev amd64 2.4.7-1ubuntu0.7 [148 kB]
+#6 9.487 Get:22 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjs-jquery all 3.6.0+dfsg+~3.5.13-1 [321 kB]
+#6 9.495 Get:23 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjs-underscore all 1.13.2~dfsg-2 [118 kB]
+#6 9.632 Get:24 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjs-sphinxdoc all 4.3.2-1 [139 kB]
+#6 9.634 Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10 amd64 3.10.12-1~22.04.16 [1950 kB]
+#6 9.668 Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu9.2 [164 kB]
+#6 9.670 Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-dev amd64 3.10.12-1~22.04.16 [4766 kB]
+#6 9.873 Get:28 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3-dev amd64 3.10.6-1~22.04.1 [7064 B]
+#6 9.873 Get:29 http://archive.ubuntu.com/ubuntu jammy/universe amd64 ninja-build amd64 1.10.1-1 [111 kB]
+#6 9.874 Get:30 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-dev amd64 3.10.12-1~22.04.16 [508 kB]
+#6 10.00 Get:31 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-lib2to3 all 3.10.8-1~22.04 [77.6 kB]
+#6 10.00 Get:32 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-distutils all 3.10.8-1~22.04 [139 kB]
+#6 10.01 Get:33 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-dev amd64 3.10.6-1~22.04.1 [26.0 kB]
+#6 10.01 Get:34 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-setuptools all 59.6.0-1.2ubuntu0.22.04.3 [340 kB]
+#6 10.01 Get:35 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-wheel all 0.37.1-2ubuntu0.22.04.1 [32.0 kB]
+#6 10.01 Get:36 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-pip all 22.0.2+dfsg-1ubuntu0.7 [1306 kB]
+#6 10.15 debconf: delaying package configuration, since apt-utils is not installed
+#6 10.18 Fetched 21.1 MB in 3s (6603 kB/s)
+#6 10.19 Selecting previously unselected package libpython3.10-minimal:amd64.
+#6 10.19 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 13949 files and directories currently installed.)
+#6 10.20 Preparing to unpack .../libpython3.10-minimal_3.10.12-1~22.04.16_amd64.deb ...
+#6 10.20 Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.16) ...
+#6 10.26 Selecting previously unselected package libexpat1:amd64.
+#6 10.26 Preparing to unpack .../libexpat1_2.4.7-1ubuntu0.7_amd64.deb ...
+#6 10.26 Unpacking libexpat1:amd64 (2.4.7-1ubuntu0.7) ...
+#6 10.27 Selecting previously unselected package python3.10-minimal.
+#6 10.28 Preparing to unpack .../python3.10-minimal_3.10.12-1~22.04.16_amd64.deb ...
+#6 10.28 Unpacking python3.10-minimal (3.10.12-1~22.04.16) ...
+#6 10.32 Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.16) ...
+#6 10.32 Setting up libexpat1:amd64 (2.4.7-1ubuntu0.7) ...
+#6 10.32 Setting up python3.10-minimal (3.10.12-1~22.04.16) ...
+#6 10.74 Selecting previously unselected package python3-minimal.
+#6 10.74 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 14253 files and directories currently installed.)
+#6 10.75 Preparing to unpack .../0-python3-minimal_3.10.6-1~22.04.1_amd64.deb ...
+#6 10.75 Unpacking python3-minimal (3.10.6-1~22.04.1) ...
+#6 10.76 Selecting previously unselected package media-types.
+#6 10.76 Preparing to unpack .../1-media-types_7.0.0_all.deb ...
+#6 10.76 Unpacking media-types (7.0.0) ...
+#6 10.78 Selecting previously unselected package libmpdec3:amd64.
+#6 10.78 Preparing to unpack .../2-libmpdec3_2.5.1-2build2_amd64.deb ...
+#6 10.78 Unpacking libmpdec3:amd64 (2.5.1-2build2) ...
+#6 10.79 Selecting previously unselected package libpython3.10-stdlib:amd64.
+#6 10.79 Preparing to unpack .../3-libpython3.10-stdlib_3.10.12-1~22.04.16_amd64.deb ...
+#6 10.79 Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.16) ...
+#6 10.85 Selecting previously unselected package python3.10.
+#6 10.85 Preparing to unpack .../4-python3.10_3.10.12-1~22.04.16_amd64.deb ...
+#6 10.85 Unpacking python3.10 (3.10.12-1~22.04.16) ...
+#6 10.86 Selecting previously unselected package libpython3-stdlib:amd64.
+#6 10.86 Preparing to unpack .../5-libpython3-stdlib_3.10.6-1~22.04.1_amd64.deb ...
+#6 10.87 Unpacking libpython3-stdlib:amd64 (3.10.6-1~22.04.1) ...
+#6 10.88 Setting up python3-minimal (3.10.6-1~22.04.1) ...
+#6 10.99 Selecting previously unselected package python3.
+#6 10.99 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 14654 files and directories currently installed.)
+#6 10.99 Preparing to unpack .../00-python3_3.10.6-1~22.04.1_amd64.deb ...
+#6 11.00 Unpacking python3 (3.10.6-1~22.04.1) ...
+#6 11.01 Selecting previously unselected package python3-pkg-resources.
+#6 11.01 Preparing to unpack .../01-python3-pkg-resources_59.6.0-1.2ubuntu0.22.04.3_all.deb ...
+#6 11.01 Unpacking python3-pkg-resources (59.6.0-1.2ubuntu0.22.04.3) ...
+#6 11.03 Selecting previously unselected package libnghttp2-14:amd64.
+#6 11.03 Preparing to unpack .../02-libnghttp2-14_1.43.0-1ubuntu0.4_amd64.deb ...
+#6 11.03 Unpacking libnghttp2-14:amd64 (1.43.0-1ubuntu0.4) ...
+#6 11.04 Selecting previously unselected package libpsl5:amd64.
+#6 11.05 Preparing to unpack .../03-libpsl5_0.21.0-1.2build2_amd64.deb ...
+#6 11.05 Unpacking libpsl5:amd64 (0.21.0-1.2build2) ...
+#6 11.06 Selecting previously unselected package libbrotli1:amd64.
+#6 11.06 Preparing to unpack .../04-libbrotli1_1.0.9-2build6_amd64.deb ...
+#6 11.06 Unpacking libbrotli1:amd64 (1.0.9-2build6) ...
+#6 11.08 Selecting previously unselected package librtmp1:amd64.
+#6 11.08 Preparing to unpack .../05-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ...
+#6 11.08 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+#6 11.09 Selecting previously unselected package libssh-4:amd64.
+#6 11.10 Preparing to unpack .../06-libssh-4_0.9.6-2ubuntu0.22.04.7_amd64.deb ...
+#6 11.10 Unpacking libssh-4:amd64 (0.9.6-2ubuntu0.22.04.7) ...
+#6 11.11 Selecting previously unselected package libcurl3-gnutls:amd64.
+#6 11.11 Preparing to unpack .../07-libcurl3-gnutls_7.81.0-1ubuntu1.25_amd64.deb ...
+#6 11.11 Unpacking libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.25) ...
+#6 11.13 Selecting previously unselected package liberror-perl.
+#6 11.13 Preparing to unpack .../08-liberror-perl_0.17029-1_all.deb ...
+#6 11.13 Unpacking liberror-perl (0.17029-1) ...
+#6 11.14 Selecting previously unselected package git-man.
+#6 11.14 Preparing to unpack .../09-git-man_1%3a2.34.1-1ubuntu1.17_all.deb ...
+#6 11.14 Unpacking git-man (1:2.34.1-1ubuntu1.17) ...
+#6 11.16 Selecting previously unselected package git.
+#6 11.16 Preparing to unpack .../10-git_1%3a2.34.1-1ubuntu1.17_amd64.deb ...
+#6 11.17 Unpacking git (1:2.34.1-1ubuntu1.17) ...
+#6 11.24 Selecting previously unselected package libexpat1-dev:amd64.
+#6 11.24 Preparing to unpack .../11-libexpat1-dev_2.4.7-1ubuntu0.7_amd64.deb ...
+#6 11.25 Unpacking libexpat1-dev:amd64 (2.4.7-1ubuntu0.7) ...
+#6 11.26 Selecting previously unselected package libjs-jquery.
+#6 11.27 Preparing to unpack .../12-libjs-jquery_3.6.0+dfsg+~3.5.13-1_all.deb ...
+#6 11.27 Unpacking libjs-jquery (3.6.0+dfsg+~3.5.13-1) ...
+#6 11.28 Selecting previously unselected package libjs-underscore.
+#6 11.29 Preparing to unpack .../13-libjs-underscore_1.13.2~dfsg-2_all.deb ...
+#6 11.29 Unpacking libjs-underscore (1.13.2~dfsg-2) ...
+#6 11.30 Selecting previously unselected package libjs-sphinxdoc.
+#6 11.30 Preparing to unpack .../14-libjs-sphinxdoc_4.3.2-1_all.deb ...
+#6 11.31 Unpacking libjs-sphinxdoc (4.3.2-1) ...
+#6 11.32 Selecting previously unselected package libpython3.10:amd64.
+#6 11.32 Preparing to unpack .../15-libpython3.10_3.10.12-1~22.04.16_amd64.deb ...
+#6 11.32 Unpacking libpython3.10:amd64 (3.10.12-1~22.04.16) ...
+#6 11.35 Selecting previously unselected package zlib1g-dev:amd64.
+#6 11.35 Preparing to unpack .../16-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu9.2_amd64.deb ...
+#6 11.35 Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu9.2) ...
+#6 11.37 Selecting previously unselected package libpython3.10-dev:amd64.
+#6 11.37 Preparing to unpack .../17-libpython3.10-dev_3.10.12-1~22.04.16_amd64.deb ...
+#6 11.37 Unpacking libpython3.10-dev:amd64 (3.10.12-1~22.04.16) ...
+#6 11.45 Selecting previously unselected package libpython3-dev:amd64.
+#6 11.45 Preparing to unpack .../18-libpython3-dev_3.10.6-1~22.04.1_amd64.deb ...
+#6 11.45 Unpacking libpython3-dev:amd64 (3.10.6-1~22.04.1) ...
+#6 11.46 Selecting previously unselected package ninja-build.
+#6 11.46 Preparing to unpack .../19-ninja-build_1.10.1-1_amd64.deb ...
+#6 11.46 Unpacking ninja-build (1.10.1-1) ...
+#6 11.48 Selecting previously unselected package python3.10-dev.
+#6 11.48 Preparing to unpack .../20-python3.10-dev_3.10.12-1~22.04.16_amd64.deb ...
+#6 11.49 Unpacking python3.10-dev (3.10.12-1~22.04.16) ...
+#6 11.50 Selecting previously unselected package python3-lib2to3.
+#6 11.50 Preparing to unpack .../21-python3-lib2to3_3.10.8-1~22.04_all.deb ...
+#6 11.50 Unpacking python3-lib2to3 (3.10.8-1~22.04) ...
+#6 11.52 Selecting previously unselected package python3-distutils.
+#6 11.52 Preparing to unpack .../22-python3-distutils_3.10.8-1~22.04_all.deb ...
+#6 11.52 Unpacking python3-distutils (3.10.8-1~22.04) ...
+#6 11.54 Selecting previously unselected package python3-dev.
+#6 11.54 Preparing to unpack .../23-python3-dev_3.10.6-1~22.04.1_amd64.deb ...
+#6 11.54 Unpacking python3-dev (3.10.6-1~22.04.1) ...
+#6 11.56 Selecting previously unselected package python3-setuptools.
+#6 11.56 Preparing to unpack .../24-python3-setuptools_59.6.0-1.2ubuntu0.22.04.3_all.deb ...
+#6 11.56 Unpacking python3-setuptools (59.6.0-1.2ubuntu0.22.04.3) ...
+#6 11.58 Selecting previously unselected package python3-wheel.
+#6 11.58 Preparing to unpack .../25-python3-wheel_0.37.1-2ubuntu0.22.04.1_all.deb ...
+#6 11.58 Unpacking python3-wheel (0.37.1-2ubuntu0.22.04.1) ...
+#6 11.60 Selecting previously unselected package python3-pip.
+#6 11.60 Preparing to unpack .../26-python3-pip_22.0.2+dfsg-1ubuntu0.7_all.deb ...
+#6 11.60 Unpacking python3-pip (22.0.2+dfsg-1ubuntu0.7) ...
+#6 11.66 Setting up media-types (7.0.0) ...
+#6 11.67 Setting up libpsl5:amd64 (0.21.0-1.2build2) ...
+#6 11.67 Setting up libbrotli1:amd64 (1.0.9-2build6) ...
+#6 11.67 Setting up libnghttp2-14:amd64 (1.43.0-1ubuntu0.4) ...
+#6 11.67 Setting up ninja-build (1.10.1-1) ...
+#6 11.68 Setting up liberror-perl (0.17029-1) ...
+#6 11.68 Setting up libexpat1-dev:amd64 (2.4.7-1ubuntu0.7) ...
+#6 11.68 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+#6 11.69 Setting up libssh-4:amd64 (0.9.6-2ubuntu0.22.04.7) ...
+#6 11.69 Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu9.2) ...
+#6 11.69 Setting up libmpdec3:amd64 (2.5.1-2build2) ...
+#6 11.69 Setting up git-man (1:2.34.1-1ubuntu1.17) ...
+#6 11.70 Setting up libjs-jquery (3.6.0+dfsg+~3.5.13-1) ...
+#6 11.70 Setting up libjs-underscore (1.13.2~dfsg-2) ...
+#6 11.71 Setting up libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.25) ...
+#6 11.71 Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.16) ...
+#6 11.71 Setting up git (1:2.34.1-1ubuntu1.17) ...
+#6 11.72 Setting up libjs-sphinxdoc (4.3.2-1) ...
+#6 11.72 Setting up libpython3-stdlib:amd64 (3.10.6-1~22.04.1) ...
+#6 11.73 Setting up libpython3.10:amd64 (3.10.12-1~22.04.16) ...
+#6 11.73 Setting up python3.10 (3.10.12-1~22.04.16) ...
+#6 12.16 Setting up python3 (3.10.6-1~22.04.1) ...
+#6 12.22 Setting up libpython3.10-dev:amd64 (3.10.12-1~22.04.16) ...
+#6 12.23 Setting up python3.10-dev (3.10.12-1~22.04.16) ...
+#6 12.23 Setting up python3-lib2to3 (3.10.8-1~22.04) ...
+#6 12.29 Setting up python3-pkg-resources (59.6.0-1.2ubuntu0.22.04.3) ...
+#6 12.41 Setting up python3-distutils (3.10.8-1~22.04) ...
+#6 12.49 Setting up libpython3-dev:amd64 (3.10.6-1~22.04.1) ...
+#6 12.49 Setting up python3-setuptools (59.6.0-1.2ubuntu0.22.04.3) ...
+#6 12.72 Setting up python3-wheel (0.37.1-2ubuntu0.22.04.1) ...
+#6 12.80 Setting up python3-dev (3.10.6-1~22.04.1) ...
+#6 12.80 Setting up python3-pip (22.0.2+dfsg-1ubuntu0.7) ...
+#6 13.45 Processing triggers for libc-bin (2.35-0ubuntu3.4) ...
+#6 DONE 14.6s
+
+#7 [stage-0  3/12] RUN python3 -m pip install --upgrade pip
+#7 0.354 Requirement already satisfied: pip in /usr/lib/python3/dist-packages (22.0.2)
+#7 0.485 Collecting pip
+#7 0.565   Downloading pip-26.1.2-py3-none-any.whl (1.8 MB)
+#7 0.719      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 11.9 MB/s eta 0:00:00
+#7 0.729 Installing collected packages: pip
+#7 0.729   Attempting uninstall: pip
+#7 0.730     Found existing installation: pip 22.0.2
+#7 0.730     Not uninstalling pip at /usr/lib/python3/dist-packages, outside environment /usr
+#7 0.731     Can't uninstall 'pip'. No files were found to uninstall.
+#7 1.239 Successfully installed pip-26.1.2
+#7 1.239 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 DONE 1.3s
+
+#8 [stage-0  4/12] RUN pip3 install torch==2.0.1+cu117 torchvision==0.15.2+cu117         --index-url https://download.pytorch.org/whl/cu117
+#8 0.990 Looking in indexes: https://download.pytorch.org/whl/cu117
+#8 1.570 Collecting torch==2.0.1+cu117
+#8 1.941   Downloading torch-2.0.1%2Bcu117-cp310-cp310-linux_x86_64.whl (1843.9 MB)
+#8 22.59      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 GB 40.9 MB/s  0:00:20
+#8 24.65 Collecting torchvision==0.15.2+cu117
+#8 24.79   Downloading torchvision-0.15.2%2Bcu117-cp310-cp310-linux_x86_64.whl (6.1 MB)
+#8 24.86      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.1/6.1 MB 85.9 MB/s  0:00:00
+#8 25.28 Collecting filelock (from torch==2.0.1+cu117)
+#8 25.36   Downloading filelock-3.29.0-py3-none-any.whl.metadata (2.0 kB)
+#8 25.74 Collecting typing-extensions (from torch==2.0.1+cu117)
+#8 25.75   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 26.35 Collecting sympy (from torch==2.0.1+cu117)
+#8 26.36   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+#8 27.07 Collecting networkx (from torch==2.0.1+cu117)
+#8 27.07   Downloading networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+#8 27.47 Collecting jinja2 (from torch==2.0.1+cu117)
+#8 27.48   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 28.06 Collecting triton==2.0.0 (from torch==2.0.1+cu117)
+#8 28.22   Downloading triton-2.0.0-1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (63.3 MB)
+#8 28.86      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.3/63.3 MB 98.8 MB/s  0:00:00
+#8 29.51 Collecting numpy (from torchvision==0.15.2+cu117)
+#8 29.52   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#8 29.96 Collecting requests (from torchvision==0.15.2+cu117)
+#8 29.97   Downloading requests-2.28.1-py3-none-any.whl (62 kB)
+#8 30.55 Collecting pillow!=8.3.*,>=5.3.0 (from torchvision==0.15.2+cu117)
+#8 30.56   Downloading pillow-12.2.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 31.01 Collecting cmake (from triton==2.0.0->torch==2.0.1+cu117)
+#8 31.02   Downloading cmake-3.25.0-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23.7 MB)
+#8 31.27      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 95.0 MB/s  0:00:00
+#8 31.71 Collecting lit (from triton==2.0.0->torch==2.0.1+cu117)
+#8 31.72   Downloading lit-15.0.7.tar.gz (132 kB)
+#8 31.78   Installing build dependencies: started
+#8 32.67   Installing build dependencies: finished with status 'done'
+#8 32.68   Getting requirements to build wheel: started
+#8 32.90   Getting requirements to build wheel: finished with status 'done'
+#8 32.90   Preparing metadata (pyproject.toml): started
+#8 33.02   Preparing metadata (pyproject.toml): finished with status 'done'
+#8 33.55 Collecting MarkupSafe>=2.0 (from jinja2->torch==2.0.1+cu117)
+#8 33.56   Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 33.73 Collecting charset-normalizer<3,>=2 (from requests->torchvision==0.15.2+cu117)
+#8 33.74   Downloading charset_normalizer-2.1.1-py3-none-any.whl (39 kB)
+#8 34.14 Collecting idna<4,>=2.5 (from requests->torchvision==0.15.2+cu117)
+#8 34.15   Downloading idna-3.4-py3-none-any.whl (61 kB)
+#8 34.58 Collecting urllib3<1.27,>=1.21.1 (from requests->torchvision==0.15.2+cu117)
+#8 34.59   Downloading urllib3-1.26.13-py2.py3-none-any.whl (140 kB)
+#8 35.01 Collecting certifi>=2017.4.17 (from requests->torchvision==0.15.2+cu117)
+#8 35.02   Downloading certifi-2022.12.7-py3-none-any.whl (155 kB)
+#8 35.45 Collecting mpmath<1.4,>=1.1.0 (from sympy->torch==2.0.1+cu117)
+#8 35.46   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+#8 35.48 Downloading pillow-12.2.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+#8 35.56    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 91.2 MB/s  0:00:00
+#8 35.57 Downloading filelock-3.29.0-py3-none-any.whl (39 kB)
+#8 35.58 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 35.59 Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+#8 35.61 Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+#8 35.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 83.3 MB/s  0:00:00
+#8 35.64 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#8 35.81    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 95.9 MB/s  0:00:00
+#8 35.82 Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+#8 35.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 85.0 MB/s  0:00:00
+#8 35.91 Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+#8 35.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 54.4 MB/s  0:00:00
+#8 35.93 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 35.97 Building wheels for collected packages: lit
+#8 35.97   Building wheel for lit (pyproject.toml): started
+#8 36.13   Building wheel for lit (pyproject.toml): finished with status 'done'
+#8 36.13   Created wheel for lit: filename=lit-15.0.7-py3-none-any.whl size=90063 sha256=80d828ef180c3e7dbb1bd37cd7c987a28daf1d76fe5669cdd51e5a252fe4f61f
+#8 36.13   Stored in directory: /root/.cache/pip/wheels/27/2c/b6/3ed2983b1b44fe0dea1bb35234b09f2c22fb8ebb308679c922
+#8 36.13 Successfully built lit
+#8 36.22 Installing collected packages: mpmath, lit, cmake, urllib3, typing-extensions, sympy, pillow, numpy, networkx, MarkupSafe, idna, filelock, charset-normalizer, certifi, requests, jinja2, triton, torch, torchvision
+#8 65.25 
+#8 65.25 Successfully installed MarkupSafe-3.0.3 certifi-2022.12.7 charset-normalizer-2.1.1 cmake-3.25.0 filelock-3.29.0 idna-3.4 jinja2-3.1.6 lit-15.0.7 mpmath-1.3.0 networkx-3.4.2 numpy-2.2.6 pillow-12.2.0 requests-2.28.1 sympy-1.14.0 torch-2.0.1+cu117 torchvision-0.15.2+cu117 triton-2.0.0 typing-extensions-4.15.0 urllib3-1.26.13
+#8 65.25 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 DONE 66.1s
+
+#9 [stage-0  5/12] RUN pip3 install "numpy<2"
+#9 0.824 Collecting numpy<2
+#9 0.908   Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#9 0.948 Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+#9 1.364    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 47.0 MB/s  0:00:00
+#9 1.410 Installing collected packages: numpy
+#9 1.410   Attempting uninstall: numpy
+#9 1.411     Found existing installation: numpy 2.2.6
+#9 1.449     Uninstalling numpy-2.2.6:
+#9 1.784       Successfully uninstalled numpy-2.2.6
+#9 3.026 Successfully installed numpy-1.26.4
+#9 3.026 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 DONE 3.2s
+
+#10 [stage-0  6/12] WORKDIR /workspace/m2t2
+#10 DONE 0.0s
+
+#11 [stage-0  7/12] COPY pointnet2_ops ./pointnet2_ops
+#11 DONE 0.1s
+
+#12 [stage-0  8/12] RUN pip3 install --no-build-isolation ./pointnet2_ops
+#12 0.392 Processing ./pointnet2_ops
+#12 0.393   Preparing metadata (pyproject.toml): started
+#12 1.908   Preparing metadata (pyproject.toml): finished with status 'done'
+#12 1.910 Requirement already satisfied: torch>=1.4 in /usr/local/lib/python3.10/dist-packages (from pointnet2-ops==3.0.0) (2.0.1+cu117)
+#12 1.912 Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from torch>=1.4->pointnet2-ops==3.0.0) (3.29.0)
+#12 1.912 Requirement already satisfied: typing-extensions in /usr/local/lib/python3.10/dist-packages (from torch>=1.4->pointnet2-ops==3.0.0) (4.15.0)
+#12 1.912 Requirement already satisfied: sympy in /usr/local/lib/python3.10/dist-packages (from torch>=1.4->pointnet2-ops==3.0.0) (1.14.0)
+#12 1.912 Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from torch>=1.4->pointnet2-ops==3.0.0) (3.4.2)
+#12 1.913 Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from torch>=1.4->pointnet2-ops==3.0.0) (3.1.6)
+#12 1.913 Requirement already satisfied: triton==2.0.0 in /usr/local/lib/python3.10/dist-packages (from torch>=1.4->pointnet2-ops==3.0.0) (2.0.0)
+#12 1.914 Requirement already satisfied: cmake in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0->torch>=1.4->pointnet2-ops==3.0.0) (3.25.0)
+#12 1.915 Requirement already satisfied: lit in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0->torch>=1.4->pointnet2-ops==3.0.0) (15.0.7)
+#12 1.917 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2->torch>=1.4->pointnet2-ops==3.0.0) (3.0.3)
+#12 1.921 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy->torch>=1.4->pointnet2-ops==3.0.0) (1.3.0)
+#12 1.922 Building wheels for collected packages: pointnet2-ops
+#12 1.923   Building wheel for pointnet2-ops (pyproject.toml): started
+#12 28.28   Building wheel for pointnet2-ops (pyproject.toml): finished with status 'done'
+#12 28.29   Created wheel for pointnet2-ops: filename=pointnet2_ops-3.0.0-cp310-cp310-linux_x86_64.whl size=8832549 sha256=0aa949bfd01adddac75d83b1a0cb4b765cd735a0db30bf8194e2dad30475f15f
+#12 28.29   Stored in directory: /tmp/pip-ephem-wheel-cache-lt7eiqws/wheels/18/df/72/7c9112112e4182dc9bdbd5814836912d62da2966492b426b6b
+#12 28.29 Successfully built pointnet2-ops
+#12 28.30 Installing collected packages: pointnet2-ops
+#12 28.45 Successfully installed pointnet2-ops-3.0.0
+#12 28.45 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#12 DONE 28.6s
+
+#13 [stage-0  9/12] COPY requirements.txt .
+#13 DONE 0.0s
+
+#14 [stage-0 10/12] RUN pip3 install -r requirements.txt
+#14 0.509 Collecting h5py (from -r requirements.txt (line 1))
+#14 0.578   Downloading h5py-3.16.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#14 0.597 Collecting hydra-core (from -r requirements.txt (line 2))
+#14 0.605   Downloading hydra_core-1.3.4-py3-none-any.whl.metadata (5.7 kB)
+#14 0.728 Collecting matplotlib (from -r requirements.txt (line 3))
+#14 0.736   Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (52 kB)
+#14 0.895 Collecting meshcat (from -r requirements.txt (line 4))
+#14 0.903   Downloading meshcat-0.3.2-py3-none-any.whl.metadata (595 bytes)
+#14 0.906 Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 5)) (1.26.4)
+#14 0.972 Collecting scikit-learn (from -r requirements.txt (line 6))
+#14 0.982   Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#14 1.087 Collecting scipy (from -r requirements.txt (line 7))
+#14 1.095   Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#14 1.131 Collecting tensorboard (from -r requirements.txt (line 8))
+#14 1.139   Downloading tensorboard-2.21.0-py3-none-any.whl.metadata (1.8 kB)
+#14 1.143 Requirement already satisfied: torch in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 9)) (2.0.1+cu117)
+#14 1.143 Requirement already satisfied: torchvision in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 10)) (0.15.2+cu117)
+#14 1.218 Collecting trimesh (from -r requirements.txt (line 11))
+#14 1.226   Downloading trimesh-4.12.2-py3-none-any.whl.metadata (13 kB)
+#14 1.260 Collecting omegaconf<2.4,>=2.2 (from hydra-core->-r requirements.txt (line 2))
+#14 1.268   Downloading omegaconf-2.3.1-py3-none-any.whl.metadata (4.5 kB)
+#14 1.286 Collecting antlr4-python3-runtime==4.9.* (from hydra-core->-r requirements.txt (line 2))
+#14 1.293   Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+#14 1.322   Installing build dependencies: started
+#14 2.042   Installing build dependencies: finished with status 'done'
+#14 2.043   Getting requirements to build wheel: started
+#14 2.263   Getting requirements to build wheel: finished with status 'done'
+#14 2.264   Preparing metadata (pyproject.toml): started
+#14 2.386   Preparing metadata (pyproject.toml): finished with status 'done'
+#14 2.404 Collecting packaging (from hydra-core->-r requirements.txt (line 2))
+#14 2.411   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#14 2.443 Collecting PyYAML>=5.1.0 (from omegaconf<2.4,>=2.2->hydra-core->-r requirements.txt (line 2))
+#14 2.451   Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#14 2.501 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 3))
+#14 2.510   Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+#14 2.525 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 3))
+#14 2.533   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#14 2.639 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 3))
+#14 2.648   Downloading fonttools-4.63.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#14 2.720 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 3))
+#14 2.729   Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (5.1 kB)
+#14 2.733 Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib->-r requirements.txt (line 3)) (12.2.0)
+#14 2.753 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 3))
+#14 2.761   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#14 2.778 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 3))
+#14 2.786   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#14 2.818 Collecting ipython>=5 (from meshcat->-r requirements.txt (line 4))
+#14 2.827   Downloading ipython-8.39.0-py3-none-any.whl.metadata (5.1 kB)
+#14 2.848 Collecting u-msgpack-python>=2.4.1 (from meshcat->-r requirements.txt (line 4))
+#14 2.856   Downloading u_msgpack_python-2.8.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#14 2.904 Collecting tornado>=4.0.0 (from meshcat->-r requirements.txt (line 4))
+#14 2.912   Downloading tornado-6.5.7-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (2.8 kB)
+#14 3.071 Collecting pyzmq>=17.0.0 (from meshcat->-r requirements.txt (line 4))
+#14 3.079   Downloading pyzmq-27.1.0-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+#14 3.107 Collecting pyngrok>=4.1.6 (from meshcat->-r requirements.txt (line 4))
+#14 3.116   Downloading pyngrok-8.1.2-py3-none-any.whl.metadata (8.6 kB)
+#14 3.138 Collecting joblib>=1.2.0 (from scikit-learn->-r requirements.txt (line 6))
+#14 3.146   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#14 3.162 Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r requirements.txt (line 6))
+#14 3.170   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#14 3.188 Collecting absl-py>=0.4 (from tensorboard->-r requirements.txt (line 8))
+#14 3.195   Downloading absl_py-2.5.0-py3-none-any.whl.metadata (3.3 kB)
+#14 3.558 Collecting grpcio<2.0,>=1.74.0 (from tensorboard->-r requirements.txt (line 8))
+#14 3.566   Downloading grpcio-1.83.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+#14 3.603 Collecting markdown>=2.6.8 (from tensorboard->-r requirements.txt (line 8))
+#14 3.610   Downloading markdown-3.10.2-py3-none-any.whl.metadata (5.1 kB)
+#14 3.742 Collecting protobuf<8.0.0,>=6.31.1 (from tensorboard->-r requirements.txt (line 8))
+#14 3.750   Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+#14 3.762 Requirement already satisfied: setuptools>=41.0.0 in /usr/lib/python3/dist-packages (from tensorboard->-r requirements.txt (line 8)) (59.6.0)
+#14 3.776 Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard->-r requirements.txt (line 8))
+#14 3.785   Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+#14 3.804 Collecting werkzeug>=1.0.1 (from tensorboard->-r requirements.txt (line 8))
+#14 3.812   Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+#14 3.815 Requirement already satisfied: typing-extensions~=4.12 in /usr/local/lib/python3.10/dist-packages (from grpcio<2.0,>=1.74.0->tensorboard->-r requirements.txt (line 8)) (4.15.0)
+#14 3.819 Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 9)) (3.29.0)
+#14 3.822 Requirement already satisfied: sympy in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 9)) (1.14.0)
+#14 3.822 Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 9)) (3.4.2)
+#14 3.822 Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 9)) (3.1.6)
+#14 3.822 Requirement already satisfied: triton==2.0.0 in /usr/local/lib/python3.10/dist-packages (from torch->-r requirements.txt (line 9)) (2.0.0)
+#14 3.823 Requirement already satisfied: cmake in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0->torch->-r requirements.txt (line 9)) (3.25.0)
+#14 3.823 Requirement already satisfied: lit in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0->torch->-r requirements.txt (line 9)) (15.0.7)
+#14 3.825 Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from torchvision->-r requirements.txt (line 10)) (2.28.1)
+#14 3.847 Collecting decorator (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 3.855   Downloading decorator-5.3.1-py3-none-any.whl.metadata (3.9 kB)
+#14 3.872 Collecting exceptiongroup (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 3.880   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+#14 3.896 Collecting jedi>=0.16 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 3.903   Downloading jedi-0.20.0-py2.py3-none-any.whl.metadata (23 kB)
+#14 3.921 Collecting matplotlib-inline (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 3.928   Downloading matplotlib_inline-0.2.2-py3-none-any.whl.metadata (2.4 kB)
+#14 3.943 Collecting pexpect>4.3 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 3.950   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+#14 3.973 Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 3.980   Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+#14 3.998 Collecting pygments>=2.4.0 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.005   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+#14 4.022 Collecting stack_data (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.029   Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+#14 4.046 Collecting traitlets>=5.13.0 (from ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.054   Downloading traitlets-5.15.1-py3-none-any.whl.metadata (10 kB)
+#14 4.073 Collecting wcwidth>=0.1.4 (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.080   Downloading wcwidth-0.8.2-py3-none-any.whl.metadata (43 kB)
+#14 4.102 Collecting parso<0.9.0,>=0.8.6 (from jedi>=0.16->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.110   Downloading parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+#14 4.129 Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.137   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#14 4.157 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 3))
+#14 4.164   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#14 4.171 Requirement already satisfied: markupsafe>=2.1.1 in /usr/local/lib/python3.10/dist-packages (from werkzeug>=1.0.1->tensorboard->-r requirements.txt (line 8)) (3.0.3)
+#14 4.180 Requirement already satisfied: charset-normalizer<3,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->torchvision->-r requirements.txt (line 10)) (2.1.1)
+#14 4.180 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->torchvision->-r requirements.txt (line 10)) (3.4)
+#14 4.180 Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->torchvision->-r requirements.txt (line 10)) (1.26.13)
+#14 4.181 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->torchvision->-r requirements.txt (line 10)) (2022.12.7)
+#14 4.198 Collecting executing>=1.2.0 (from stack_data->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.206   Downloading executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+#14 4.224 Collecting asttokens>=2.1.0 (from stack_data->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.231   Downloading asttokens-3.0.2-py3-none-any.whl.metadata (5.7 kB)
+#14 4.250 Collecting pure-eval (from stack_data->ipython>=5->meshcat->-r requirements.txt (line 4))
+#14 4.258   Downloading pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+#14 4.263 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy->torch->-r requirements.txt (line 9)) (1.3.0)
+#14 4.276 Downloading h5py-3.16.0-cp310-cp310-manylinux_2_28_x86_64.whl (5.1 MB)
+#14 4.488    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 25.1 MB/s  0:00:00
+#14 4.497 Downloading hydra_core-1.3.4-py3-none-any.whl (155 kB)
+#14 4.510 Downloading omegaconf-2.3.1-py3-none-any.whl (79 kB)
+#14 4.523 Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.8 MB)
+#14 4.649    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 70.7 MB/s  0:00:00
+#14 4.824 Downloading meshcat-0.3.2-py3-none-any.whl (2.6 MB)
+#14 4.870    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 55.3 MB/s  0:00:00
+#14 4.879 Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#14 4.978    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 98.0 MB/s  0:00:00
+#14 4.989 Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+#14 5.371    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 98.6 MB/s  0:00:00
+#14 5.383 Downloading tensorboard-2.21.0-py3-none-any.whl (5.5 MB)
+#14 5.448    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 84.6 MB/s  0:00:00
+#14 5.460 Downloading grpcio-1.83.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.1 MB)
+#14 5.537    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 90.7 MB/s  0:00:00
+#14 5.545 Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl (327 kB)
+#14 5.560 Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+#14 5.629    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 96.7 MB/s  0:00:00
+#14 5.636 Downloading trimesh-4.12.2-py3-none-any.whl (741 kB)
+#14 5.647    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 741.0/741.0 kB 63.6 MB/s  0:00:00
+#14 5.655 Downloading absl_py-2.5.0-py3-none-any.whl (137 kB)
+#14 5.669 Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+#14 5.681 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#14 5.694 Downloading fonttools-4.63.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.9 MB)
+#14 5.746    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 93.9 MB/s  0:00:00
+#14 5.756 Downloading ipython-8.39.0-py3-none-any.whl (831 kB)
+#14 5.766    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 831.8/831.8 kB 68.9 MB/s  0:00:00
+#14 5.774 Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+#14 5.789 Downloading jedi-0.20.0-py2.py3-none-any.whl (4.9 MB)
+#14 5.840    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 95.0 MB/s  0:00:00
+#14 5.850 Downloading parso-0.8.7-py2.py3-none-any.whl (107 kB)
+#14 5.861 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#14 5.876 Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+#14 5.894    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 86.1 MB/s  0:00:00
+#14 5.902 Downloading markdown-3.10.2-py3-none-any.whl (108 kB)
+#14 5.912 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#14 5.922 Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+#14 5.931 Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+#14 5.941 Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+#14 5.956    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 82.1 MB/s  0:00:00
+#14 5.963 Downloading pyngrok-8.1.2-py3-none-any.whl (25 kB)
+#14 5.973 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#14 5.982 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#14 5.994 Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+#14 6.005    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 64.2 MB/s  0:00:00
+#14 6.014 Downloading pyzmq-27.1.0-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (854 kB)
+#14 6.025    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 854.1/854.1 kB 70.9 MB/s  0:00:00
+#14 6.033 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#14 6.043 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#14 6.052 Downloading tornado-6.5.7-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (449 kB)
+#14 6.066 Downloading traitlets-5.15.1-py3-none-any.whl (85 kB)
+#14 6.076 Downloading u_msgpack_python-2.8.0-py2.py3-none-any.whl (10 kB)
+#14 6.086 Downloading wcwidth-0.8.2-py3-none-any.whl (323 kB)
+#14 6.099 Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+#14 6.110 Downloading decorator-5.3.1-py3-none-any.whl (10 kB)
+#14 6.120 Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+#14 6.130 Downloading matplotlib_inline-0.2.2-py3-none-any.whl (9.5 kB)
+#14 6.139 Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+#14 6.148 Downloading asttokens-3.0.2-py3-none-any.whl (28 kB)
+#14 6.158 Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+#14 6.167 Downloading pure_eval-0.2.3-py3-none-any.whl (11 kB)
+#14 6.300 Building wheels for collected packages: antlr4-python3-runtime
+#14 6.310   Building wheel for antlr4-python3-runtime (pyproject.toml): started
+#14 6.470   Building wheel for antlr4-python3-runtime (pyproject.toml): finished with status 'done'
+#14 6.470   Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144589 sha256=462568592b01a529b9f5c05c58c05044ed6e2d0ecf6624bd270b754f025b2214
+#14 6.471   Stored in directory: /root/.cache/pip/wheels/12/93/dd/1f6a127edc45659556564c5730f6d4e300888f4bca2d4c5a88
+#14 6.472 Successfully built antlr4-python3-runtime
+#14 6.565 Installing collected packages: u-msgpack-python, pure-eval, ptyprocess, antlr4-python3-runtime, werkzeug, wcwidth, trimesh, traitlets, tornado, threadpoolctl, tensorboard-data-server, six, scipy, pyzmq, PyYAML, pyparsing, pygments, protobuf, pexpect, parso, packaging, markdown, kiwisolver, joblib, h5py, grpcio, fonttools, executing, exceptiongroup, decorator, cycler, contourpy, asttokens, absl-py, tensorboard, stack_data, scikit-learn, python-dateutil, pyngrok, prompt_toolkit, omegaconf, matplotlib-inline, jedi, matplotlib, ipython, hydra-core, meshcat
+#14 14.73 
+#14 14.73 Successfully installed PyYAML-6.0.3 absl-py-2.5.0 antlr4-python3-runtime-4.9.3 asttokens-3.0.2 contourpy-1.3.2 cycler-0.12.1 decorator-5.3.1 exceptiongroup-1.3.1 executing-2.2.1 fonttools-4.63.0 grpcio-1.83.0 h5py-3.16.0 hydra-core-1.3.4 ipython-8.39.0 jedi-0.20.0 joblib-1.5.3 kiwisolver-1.5.0 markdown-3.10.2 matplotlib-3.10.9 matplotlib-inline-0.2.2 meshcat-0.3.2 omegaconf-2.3.1 packaging-26.2 parso-0.8.7 pexpect-4.9.0 prompt_toolkit-3.0.53 protobuf-7.35.1 ptyprocess-0.7.0 pure-eval-0.2.3 pygments-2.20.0 pyngrok-8.1.2 pyparsing-3.3.2 python-dateutil-2.9.0.post0 pyzmq-27.1.0 scikit-learn-1.7.2 scipy-1.15.3 six-1.17.0 stack_data-0.6.3 tensorboard-2.21.0 tensorboard-data-server-0.7.2 threadpoolctl-3.6.0 tornado-6.5.7 traitlets-5.15.1 trimesh-4.12.2 u-msgpack-python-2.8.0 wcwidth-0.8.2 werkzeug-3.1.8
+#14 14.73 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#14 DONE 15.2s
+
+#15 [stage-0 11/12] COPY . .
+#15 DONE 0.2s
+
+#16 [stage-0 12/12] RUN pip3 install --no-deps --no-build-isolation -e .
+#16 0.339 Obtaining file:///workspace/m2t2
+#16 0.340   Checking if build backend supports build_editable: started
+#16 0.435   Checking if build backend supports build_editable: finished with status 'done'
+#16 0.435 ERROR: Project file:///workspace/m2t2 uses a build backend that is missing the 'build_editable' hook, so it cannot be installed in editable mode. Consider using a build backend that supports PEP 660.
+#16 ERROR: process "/bin/bash -c pip3 install --no-deps --no-build-isolation -e ." did not complete successfully: exit code: 1
+------
+ > [stage-0 12/12] RUN pip3 install --no-deps --no-build-isolation -e .:
+0.339 Obtaining file:///workspace/m2t2
+0.340   Checking if build backend supports build_editable: started
+0.435   Checking if build backend supports build_editable: finished with status 'done'
+0.435 ERROR: Project file:///workspace/m2t2 uses a build backend that is missing the 'build_editable' hook, so it cannot be installed in editable mode. Consider using a build backend that supports PEP 660.
+------
+Dockerfile:56
+--------------------
+  54 |     # m2t2 package itself, editable so bind-mounted local edits take effect without rebuild
+  55 |     COPY . .
+  56 | >>> RUN pip3 install --no-deps --no-build-isolation -e .
+  57 |     
+  58 |     ENV PYTHONUNBUFFERED=1
+--------------------
+ERROR: failed to solve: process "/bin/bash -c pip3 install --no-deps --no-build-isolation -e ." did not complete successfully: exit code: 1
